@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 class="text-center">Events</h1>
+
+  {% if not events %}
+  <h2 class="text-center">There are no events at the moment!</h2>
+  {% else %}
+
+  <div class="row m-2">
+    {% for event in events %}
+    <a class="col-lg-6 col-sm-12" href="{% url 'event' event.id %}">
+      <div class="card shadow-sm m-2 h-100">
+        <img
+          src="{{ event.image.url }}"
+          alt="{{event.name}} Image"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h1>{{event.name}}</h1>
+          <p>{{event.date_pretty}}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %} {% endblock %}

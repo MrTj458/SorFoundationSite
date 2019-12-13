@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 class="text-center">Gallery</h1>
+
+  <div class="d-flex flex-wrap justify-content-center">
+    {% for image in images %}
+    <div class="card m-2 shadow">
+      <img
+        class="card-img-top rounded m-0 img-fluid"
+        src="{{ image.image.url }}"
+        alt="{{ image.title }} Gallery Image"
+      />
+      {% if image.title %}
+      <div class="card-body">
+        {{ image.title }}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
