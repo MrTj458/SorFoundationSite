@@ -10,5 +10,10 @@ class RecipientModelAdmin(SummernoteModelAdmin):
     summernote_fields = ('text',)
 
 
+class EventModelAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
+
+
 admin.site.register(models.Sponsor)
 admin.site.register(models.Recipient, RecipientModelAdmin)
+admin.site.register(models.Event, EventModelAdmin)
