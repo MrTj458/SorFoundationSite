@@ -39,11 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Packages
-    'django_summernote',
-
     # sor foundation
     'core',
+
+    # Packages
+    'django_summernote',
+    'django_cleanup',  # Cleanup must be last
 ]
 
 MIDDLEWARE = [
