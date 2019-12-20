@@ -33,16 +33,17 @@
 <div class="d-flex flex-column align-items-center py-5">
   <h2 class="">Our Sponsors</h2>
   <div class="d-flex justify-content-center flex-wrap">
-    <!-- <img
-      class="img-fluid m-2"
-      src="{% static 'School of Rock Sandy.png' %}"
-      alt="School of Rock Sandy"
-    />
-    <img
-      class="img-fluid m-2"
-      src="{% static 'The Royal.jpg' %}"
-      alt="The Royal"
-    /> -->
+    {% if not sponsors %}
+    <h2>There are no sponsors.</h2>
+    {% else %} {% for sponsor in sponsors %}
+    <a href="{{sponsor.link}}">
+      <img
+        class="img-fluid m-2"
+        src="{{sponsor.image.url}}"
+        alt="{{sponsor.name}} image"
+      />
+    </a>
+    {% endfor %} {% endif %}
   </div>
 </div>
 

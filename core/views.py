@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from .models import Sponsor
+
 
 def home(request):
-    return render(request, 'core/home.html')
+    sponsors = Sponsor.objects.all()
+    return render(request, 'core/home.html', {'sponsors': sponsors})
