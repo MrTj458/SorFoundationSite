@@ -10,7 +10,7 @@ pylint = "*"
 [packages]
 django = "*"
 pillow = "*"
-django-tinymce = "*"
+django-summernote = "*"
 
 [requires]
 python_version = "3.7"
