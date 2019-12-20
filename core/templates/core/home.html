@@ -7,8 +7,16 @@
       alt="Foundation Logo"
     />
   </div>
-  <h1 class="text-center mt-5">The School Of Rock Foundation</h1>
-  <h3>fortheloveofrock.ut@gmail.com</h3>
+  <h1 class="text-center mt-5" style="font-size: 5rem;">
+    The School Of Rock Foundation
+  </h1>
+  <button onclick="copy()" class="border-0 bg-white">
+    <div class="d-flex">
+      <h3 id="email">
+        fortheloveofrock.ut@gmail.com
+      </h3>
+    </div>
+  </button>
   <div class="d-flex flex-wrap justify-content-center align-items-center">
     <a
       href="https://www.facebook.com/theschoolofrockfoundation/"
@@ -58,5 +66,15 @@
     {% endfor %} {% endif %}
   </div>
 </div>
+
+<script>
+  function copy() {
+    var email = document.getElementById('email')
+
+    navigator.clipboard.writeText(email.innerHTML.trim()).then(() => {
+      alert('Email copied to clipboard!')
+    })
+  }
+</script>
 
 {% endblock %}

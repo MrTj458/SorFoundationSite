@@ -12,6 +12,8 @@ django = "*"
 pillow = "*"
 django-summernote = "*"
 django-cleanup = "*"
+django-dotenv = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"
