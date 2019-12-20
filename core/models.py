@@ -30,3 +30,10 @@ class Event(models.Model):
 
     def date_pretty(self):
         return self.start_date.strftime('%B %d, %Y')
+
+
+class GalleryImage(models.Model):
+    image = models.ImageField(upload_to='gallery/')
+
+    def __str__(self):
+        return self.image.name

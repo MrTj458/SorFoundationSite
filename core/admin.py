@@ -17,3 +17,4 @@ class EventModelAdmin(SummernoteModelAdmin):
 admin.site.register(models.Sponsor)
 admin.site.register(models.Recipient, RecipientModelAdmin)
 admin.site.register(models.Event, EventModelAdmin)
+admin.site.register(models.GalleryImage)

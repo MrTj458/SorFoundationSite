@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Sponsor, Recipient, Event
+from .models import Sponsor, Recipient, Event, GalleryImage
 
 
 def home(request):
@@ -21,3 +21,8 @@ def events(request):
 def event(request, id):
     event = Event.objects.get(pk=id)
     return render(request, 'core/event.html', {'event': event})
+
+
+def gallery(request):
+    images = GalleryImage.objects.all()
+    return render(request, 'core/gallery.html', {'images': images})
