@@ -8,6 +8,18 @@
     />
   </div>
   <h1 class="text-center mt-5">The School Of Rock Foundation</h1>
+  <h3>fortheloveofrock.ut@gmail.com</h3>
+  <div class="d-flex flex-wrap justify-content-center align-items-center">
+    <a
+      href="https://www.facebook.com/theschoolofrockfoundation/"
+      class="nav-link"
+    >
+      <i class="fab fa-facebook-square fa-3x"></i>
+    </a>
+    <a href="https://www.instagram.com/schoolofrocksandy/">
+      <i class="fab fa-instagram fa-3x"></i>
+    </a>
+  </div>
 </div>
 
 <div class="red d-flex flex-column align-items-center py-5">
@@ -34,7 +46,7 @@
   <h2 class="">Our Sponsors</h2>
   <div class="d-flex justify-content-center flex-wrap">
     {% if not sponsors %}
-    <h2>There are no sponsors.</h2>
+    <h2>Oh no! Sponsors are missing!</h2>
     {% else %} {% for sponsor in sponsors %}
     <a href="{{sponsor.link}}">
       <img

@@ -3,8 +3,8 @@
   <h1 class="text-center">Events</h1>
 
   {% if not events %}
-  <h2 class="text-center">There are no events at the moment!</h2>
-  {% else %}
+  <h2 class="text-center">There are no scheduled events at the moment!</h2>
+  {% endif %}
 
   <div class="row m-2">
     {% for event in events %}
@@ -27,4 +27,4 @@
     {% endfor %}
   </div>
 </div>
-{% endif %} {% endblock %}
+{% endblock %}
