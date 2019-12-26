@@ -28,8 +28,8 @@ DEBUG = (os.environ.get('DEBUG') == 'True')
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'sorfoundation.herokuapp.com',
-    'schoolofrockfoundation.com',
-    'schoolofrockfoundation.org',
+    'www.schoolofrockfoundation.com',
+    'www.schoolofrockfoundation.org',
 ]
 
 # Application definition
