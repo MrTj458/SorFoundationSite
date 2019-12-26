@@ -26,7 +26,7 @@ def event(request, id):
 
 
 def gallery(request):
-    images = GalleryImage.objects.all()
+    images = GalleryImage.objects.all()[::-1]
     return render(request, 'core/gallery.html', {'images': images})
 
 
