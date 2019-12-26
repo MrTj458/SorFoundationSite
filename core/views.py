@@ -30,23 +30,23 @@ def gallery(request):
     return render(request, 'core/gallery.html', {'images': images})
 
 
-def apply(request):
-    if request.method == 'POST':
-        email = request.POST['email']
-        name = request.POST['name']
-        text = request.POST['text']
+# def apply(request):
+#     if request.method == 'POST':
+#         email = request.POST['email']
+#         name = request.POST['name']
+#         text = request.POST['text']
 
-        send_mail(
-            f'New application from {name}',
-            f'An application was made!\nName: {name}\nEmail: {email}\n\n{text}',
-            email,
-            [os.environ['APPLY_EMAIL']],
-        )
+#         send_mail(
+#             f'New application from {name}',
+#             f'An application was made!\nName: {name}\nEmail: {email}\n\n{text}',
+#             email,
+#             [os.environ['APPLY_EMAIL']],
+#         )
 
-        return render(
-            request,
-            'core/apply.html',
-            {'message': 'Your application has been sent!'}
-        )
+#         return render(
+#             request,
+#             'core/apply.html',
+#             {'message': 'Your application has been sent!'}
+#         )
 
-    return render(request, 'core/apply.html')
+#     return render(request, 'core/apply.html')
